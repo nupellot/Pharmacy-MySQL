@@ -1,6 +1,7 @@
 use rk6_schema;
-drop table report;
+
 # Разработать процедуру, которая будет принимать на вход дату. В процедуре реализовать вычисление и занесение в БД стоимости всех заказов, составленных в этот день.
+drop table report;
 create table report(summ int, dat date);
 select * from report;
 drop procedure daily_cost;
@@ -43,7 +44,7 @@ begin
     /*set price = price + earn*new.amount прибавляем стоимость строки к заказу*/
     /*where id_o=new.id_a; /*в который была внесена строка*/
     update `order`
-    set price = new.price*new.amount
+    set price = price + new.price*new.amount
     where id_o=new.id_a;
 end
 \\
