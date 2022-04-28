@@ -1,0 +1,1 @@
+SELECT id_b, amount FROM order_line WHERE id_b = 3

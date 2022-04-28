@@ -1,0 +1,1 @@
+SELECT MIN(order_line.price) FROM order_line WHERE id_b = 3

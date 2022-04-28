@@ -1,0 +1,1 @@
+SELECT drug.group, COUNT(*) FROM drug GROUP BY drug.group
