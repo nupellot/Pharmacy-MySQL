@@ -35,10 +35,12 @@ BEGIN
 		INSERT INTO report values (SUMa, d); /*то создаем ее*/
 	END IF;
 END
-\\
+//
 
 # Реализовать триггер, который будет срабатывать при добавлении новой строки заказа. В триггере реализовать увеличение общей стоимости соответствующего заказа нарастающим образом.
+//
 DROP TRIGGER trigg;
+//
 delimiter \\ 
 CREATE TRIGGER trigg AFTER INSERT on order_line FOR EACH ROW
 BEGIN
